@@ -12,15 +12,9 @@ from data.locations import METRO_MANILA_PLACES, get_location_by_name, get_all_lo
 from models.database import db_manager
 
 app = Flask(__name__)
-CORS(app, origins="*", methods=["*", "OPTIONS"], allow_headers=["*"], supports_credentials=True)
+CORS(app, resources={r"/*": {"origins": "*"}}, supports_credentials=True)
 
-@app.after_request
-def after_request(response):
-    response.headers.add('Access-Control-Allow-Origin', '*')
-    response.headers.add('Access-Control-Allow-Headers', '*')
-    response.headers.add('Access-Control-Allow-Methods', '*')
-    response.headers.add('Access-Control-Allow-Credentials', 'true')
-    return response
+
 
 weather_service = WeatherService()
 ml_prediction_service = MLPredictionService()
