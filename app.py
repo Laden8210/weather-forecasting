@@ -12,7 +12,7 @@ from data.locations import METRO_MANILA_PLACES, get_location_by_name, get_all_lo
 from models.database import db_manager
 
 app = Flask(__name__)
-CORS(app)  
+CORS(app, origins="*", methods=["*", "OPTIONS"], allow_headers=["*"], supports_credentials=True)
 
 
 weather_service = WeatherService()
