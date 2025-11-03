@@ -1,1 +1,32 @@
+# Python virtual environments
 venv/
+env/
+.venv/
+.env/
+
+# PyCharm / VSCode environment folders
+.idea/
+.vscode/
+
+# Python cache and compiled files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pdb
+*.egg-info/
+*.egg
+*.log
+
+# Build and distribution folders
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# System files
+.DS_Store
+Thumbs.db
